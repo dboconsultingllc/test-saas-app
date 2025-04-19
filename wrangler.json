@@ -1,0 +1,30 @@
+{
+  "name": "test-saas-app",
+  "main": "./dist/index.js",
+  "assets": {
+    "directory": "./dist"
+  },
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "vars": {
+    "EXAMPLE_VALUE": "example_value"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "test-saas-app-d1-db",
+      "database_id": "1a053ba3-c78e-4f5a-9def-e081898d76c6"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "test-saas-app-customer-workflow",
+      "binding": "CUSTOMER_WORKFLOW",
+      "class_name": "CustomerWorkflow"
+    }
+  ]
+}
